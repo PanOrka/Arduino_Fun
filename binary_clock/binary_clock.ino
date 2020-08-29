@@ -12,7 +12,7 @@ unsigned short time = 0;
 void loop() {
   Serial.println(time);
   for (short i=0; i < 6; ++i) {
-    if ((time & led_on[i]) == led_on[i]) {
+    if (time & led_on[i]) {
       analogWrite(out_pins[i], 255);
     } else {
       analogWrite(out_pins[i], 0);
