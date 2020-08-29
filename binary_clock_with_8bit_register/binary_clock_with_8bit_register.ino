@@ -31,7 +31,7 @@ void load_register() {
 
 void put_num(short num) {
   for (int i=0; i<3; i++) {
-    if ((num & led_arr[i]) == led_arr[i]) {
+    if (num & led_arr[i]) {
       write_one();
     } else {
       write_zero();
